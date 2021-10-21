@@ -1,0 +1,241 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(1.6rem, 3vw, 3.5rem);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+p {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  line-height: 1.4;
+}
+
+a {
+  color: var(--clr-link);
+}
+a:hover, a:focus {
+  color: var(--clr-link-hvr);
+  text-decoration: none;
+}
+
+:root {
+  /*=============================COLORS==================================*/
+  --clr-primary: #f8f8f8;
+  --clr-secondary: #141414;
+  --clr-tertiary: #0a7871;
+  --clr-gray-light: #d4d4d4;
+  --clr-link-hvr: #1f7ffd;
+  /*=============================SPACINGS==================================*/
+  --section-spacing: 5rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 65em) {
+  .container {
+    max-width: 128rem;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+.nav {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  z-index: 20;
+  color: var(--clr-primary);
+}
+.nav__logo {
+  position: relative;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-style: italic;
+  letter-spacing: 0.2rem;
+}
+.nav__logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  height: 100%;
+  border: 1px solid var(--clr-primary);
+}
+.nav__secondary-logo--top {
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
+}
+
+.dark-mode-icon {
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  color: var(--clr-gray-light);
+  text-align: center;
+}
+.dark-mode-icon__icon {
+  font-size: 2rem;
+}
+.dark-mode-icon__text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.video-controls {
+  position: absolute;
+  top: 6rem;
+  left: 12.5rem;
+  color: var(--clr-gray-light);
+}
+.video-controls__icon {
+  font-size: 2rem;
+}
+.video-controls__icon:not(:first-child) {
+  margin-left: 1.5rem;
+}
+.video-controls__icon--play {
+  display: none;
+}
+.video-controls__icon--mute {
+  display: none;
+}
+
+.social-media-icons {
+  position: absolute;
+  top: 6rem;
+  right: 4rem;
+  color: var(--clr-gray-light);
+}
+.social-media-icons__icon {
+  font-size: 2rem;
+}
+.social-media-icons__icon:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 55, 21, 0.45);
+  z-index: 10;
+}
+
+.hero-container {
+  position: relative;
+}
+.hero-container__video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: var(--clr-primary);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5rem;
+  z-index: 20;
+}
+.hero-text__sub-heading {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.hero-text__paragraph {
+  color: var(--clr-gray-light);
+  margin-top: 2rem;
+}
+
+.about-me {
+  background-color: red;
+  margin-top: var(--section-spacing);
+}
+
+/* @use 'components' as *; */
+
+/*# sourceMappingURL=main.css.map */
