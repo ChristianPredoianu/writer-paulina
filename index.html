@@ -5,7 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/sass/main.scss" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/541f85d259.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="nav">
+        <p class="nav__logo">Paulina Ny</p>
+        <div class="nav__secondary-logo">
+          <p class="nav__secondary-logo nav__secondary-logo--top">
+            Författarinna
+          </p>
+          <p class="nav__secondary-logo nav__secondary-logo--bottom">
+            Storge förlag
+          </p>
+        </div>
+        <div class="dark-mode-icon">
+          <i class="far fa-moon dark-mode-icon__icon"></i>
+          <p class="dark-mode-icon__text">Mörkt Läge</p>
+        </div>
+        <div class="video-controls">
+          <i
+            class="
+              far
+              fa-play-circle
+              video-controls__icon video-controls__icon--play
+            "
+          ></i>
+          <i
+            class="
+              far
+              fa-pause-circle
+              video-controls__icon video-controls__icon--pause
+            "
+          ></i>
+          <i
+            class="
+              fas
+              fa-volume-mute
+              video-controls__icon video-controls__icon--mute
+            "
+          ></i>
+          <i
+            class="
+              fas
+              fa-volume-off
+              video-controls__icon video-controls__icon--sound
+            "
+          ></i>
+        </div>
+        <div class="social-media-icons">
+          <i class="fab fa-instagram social-media-icons__icon"></i>
+          <i class="fab fa-facebook social-media-icons__icon"></i>
+          <i class="fas fa-envelope social-media-icons__icon"></i>
+        </div>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+    <div class="hero-container">
+      <video src="./assets/video.mp4" class="hero-container__video"></video>
+      <div class="hero-text">
+        <h1 class="hero-text__heading">"Du kan inte fly ödet"</h1>
+        <h2 class="hero-text__sub-heading">Av Paulina Ny</h2>
+        <p class="hero-text__paragraph">
+          Du kan inte fly ödet är en omtumlande kärleksroman kring två människor
+          som förs samman av en slump, eller är det ödet som bestämt att de ska
+          ses? Iris bästa kompis Ella verkar i alla fall tro det och mycket
+          riktigt kommer Iris och Jaces vägar mötas igen.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <section class="about-me">
+        <h3>dsa</h3>
+        <h4>Romanceförfattarinna</h4>
+      </section>
+    </div>
+  </body>
 </html>
