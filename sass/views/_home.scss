@@ -1,0 +1,124 @@
+@use '../abstracts/' as *;
+@use '../utilities/' as *;
+
+body {
+  min-height: 100vh;
+}
+
+.nav {
+  @include position($pos: absolute, $top: 1rem);
+  @include flex-config($align: center, $justify: space-around);
+  width: 100%;
+  z-index: 20;
+  color: var(--clr-primary);
+
+  &__logo {
+    position: relative;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-style: italic;
+    letter-spacing: 0.2rem;
+
+    &::after {
+      @include pseudo($top: 0, $right: -2rem);
+      height: 100%;
+      border: 1px solid var(--clr-primary);
+    }
+  }
+
+  &__secondary-logo {
+    &--top {
+      font-size: clamp(1.3rem, 2vw, 1.6rem);
+    }
+  }
+}
+
+.dark-mode-icon {
+  @include position($pos: absolute, $top: 6rem, $left: 2rem);
+  color: var(--clr-gray-light);
+  text-align: center;
+
+  &__icon {
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+.video-controls {
+  @include position($pos: absolute, $top: 6rem, $left: 12.5rem);
+  color: var(--clr-gray-light);
+
+  &__icon {
+    font-size: 2rem;
+
+    &:not(:first-child) {
+      margin-left: 1.5rem;
+    }
+
+    &--play {
+      display: none;
+    }
+
+    &--mute {
+      display: none;
+    }
+  }
+}
+
+.social-media-icons {
+  @include position($pos: absolute, $top: 6rem, $right: 4rem);
+  color: var(--clr-gray-light);
+
+  &__icon {
+    font-size: 2rem;
+
+    &:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(12, 55, 21, 0.45);
+  z-index: 10;
+}
+
+.hero-container {
+  position: relative;
+
+  &__video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.hero-text {
+  @include position($pos: absolute, $bottom: 0, $left: 0);
+  width: 100%;
+  color: var(--clr-primary);
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 5rem;
+  z-index: 20;
+
+  &__sub-heading {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  &__paragraph {
+    color: var(--clr-gray-light);
+    margin-top: 2rem;
+  }
+}
+
+.about-me {
+  background-color: red;
+  margin-top: var(--section-spacing);
+}
