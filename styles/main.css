@@ -79,7 +79,7 @@ h3 {
 }
 
 h4 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.3rem, 3vw, 2.5rem);
 }
 
 p {
@@ -95,6 +95,16 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+.section-heading {
+  text-transform: uppercase;
+  text-align: center;
+}
+.section-heading__subheading {
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 :root {
   /*=============================COLORS==================================*/
   --clr-primary: #f8f8f8;
@@ -104,6 +114,37 @@ a:hover, a:focus {
   --clr-link-hvr: #1f7ffd;
   /*=============================SPACINGS==================================*/
   --section-spacing: 5rem;
+  --mobile-el-spacing: 3rem;
+  --mobile-padding: 3rem;
+}
+
+.swiper {
+  width: 24rem;
+  height: 32rem;
+  margin-top: 5rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+  padding: 10rem 3rem;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: var(--clr-tertiary);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: #0a53a7;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: #025045;
 }
 
 .container {
@@ -140,12 +181,15 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  right: -2rem;
+  right: -4rem;
   height: 100%;
   border: 1px solid var(--clr-primary);
 }
 .nav__secondary-logo--top {
   font-size: clamp(1.3rem, 2vw, 1.6rem);
+}
+.nav__secondary-logo--bottom {
+  font-weight: 600;
 }
 
 .dark-mode-icon {
@@ -165,15 +209,15 @@ body {
 
 .video-controls {
   position: absolute;
-  top: 6rem;
+  top: 25rem;
   left: 12.5rem;
   color: var(--clr-gray-light);
 }
 .video-controls__icon {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .video-controls__icon:not(:first-child) {
-  margin-left: 1.5rem;
+  margin-left: 3rem;
 }
 .video-controls__icon--play {
   display: none;
@@ -232,10 +276,16 @@ body {
 }
 
 .about-me {
-  background-color: red;
   margin-top: var(--section-spacing);
+  padding: var(--mobile-padding);
+}
+.about-me__img {
+  margin: var(--mobile-el-spacing) 0;
 }
 
-/* @use 'components' as *; */
+.about-books {
+  margin-top: var(--section-spacing);
+  padding: var(--mobile-padding);
+}
 
 /*# sourceMappingURL=main.css.map */
