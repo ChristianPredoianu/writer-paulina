@@ -1,28 +1,57 @@
-const videoPlayBtn = document.querySelector('.video-controls__icon--play');
-const videoPauseBtn = document.querySelector('.video-controls__icon--pause');
-const videoMute = document.querySelector('.video-controls__icon--pause');
-const videoUnMute = document.querySelector('.video-controls__icon--sound');
+const heroVideo = document.querySelector('.hero-container__video');
 
-videoPlayBtn.addEventListener('click', playVideo);
-videoPauseBtn.addEventListener('click', pauseVideo);
-videoMute.addEventListener('click', muteVideo);
-videoUnMute.addEventListener('click', unMuteVideo);
+//Closure for play-pause video
+const playPauseVideo = () => {
+  const videoPlayBtn = document.querySelector('.video-controls__icon--play');
+  const videoPauseBtn = document.querySelector('.video-controls__icon--pause');
+  let isHeroVideoPlaying = true;
 
-function playVideo() {
-  console.log('video played');
-}
+  return (togglePlayVideo = () => {
+    if (isHeroVideoPlaying) {
+      videoPauseBtn.addEventListener('click', () => {
+        heroVideo.pause();
+        isHeroVideoPlaying = false;
+        videoPauseBtn.style.display = 'none';
+        videoPlayBtn.style.display = 'inline-block';
+      });
+    }
+    videoPlayBtn.addEventListener('click', () => {
+      heroVideo.play();
+      isHeroVideoPlaying = true;
+      videoPauseBtn.style.display = 'inline-block';
+      videoPlayBtn.style.display = 'none';
+    });
+  });
+};
 
-function pauseVideo() {
-  console.log('video paused');
-}
+//Closure for mute-unmute video sound
+const playMuteSound = () => {
+  const videoMute = document.querySelector('.video-controls__icon--mute');
+  const videoUnMute = document.querySelector('.video-controls__icon--sound');
+  let isVideoMuted = true;
 
-function muteVideo() {
-  console.log('video muted');
-}
+  return (toggleVideoSound = () => {
+    if (isVideoMuted) {
+      videoMute.addEventListener('click', () => {
+        heroVideo.muted = false;
+        videoMute.style.display = 'none';
+        videoUnMute.style.display = 'inline-block';
+      });
+    }
+    videoUnMute.addEventListener('click', () => {
+      heroVideo.muted = true;
+      isVideoMuted = true;
+      videoUnMute.style.display = 'none';
+      videoMute.style.display = 'inline-block';
+    });
+  });
+};
 
-function unMuteVideo() {
-  console.log('video unmuted');
-}
+const toggleVideoPlay = playPauseVideo();
+const toggleSoundVideo = playMuteSound();
+
+toggleVideoPlay();
+toggleSoundVideo();
 
 // ===================Swiper.js===========================
 const swiper = new Swiper('.mySwiper', {
