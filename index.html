@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/541f85d259.js"
       crossorigin="anonymous"
@@ -87,9 +91,57 @@
     </div>
     <div class="container">
       <section class="about-me">
-        <h3>dsa</h3>
-        <h4>Romanceförfattarinna</h4>
+        <h3 class="section-heading">Om Mig</h3>
+        <h4 class="section-heading__subheading">Romanceförfattarinna</h4>
+        <div class="about-me-wrapper">
+          <img src="./assets/bild1.jpg" alt="" class="about-me__img" />
+          <p class="about-me__paragraph">
+            Paulina Ny är född 1989, bor i ett samhälle i Blekinge tillsammans
+            med sin man, två barn och nakenkatten Dallas. Hon studerar till
+            Studie- och yrkesvägledare på Malmö Universitet. Paulina har alltid
+            älskat berättelser, allt från att få höra andras historier till att
+            hitta på egna, attfå försvinna in i en annan tid och en annan värld.
+            Hon har sedan barnsben drömt om att bli författare, men har aldrig
+            trott tillräckligt mycket på sig själv för att ens försöka. Men en
+            dag 2019 läste hon ett citat: ”Du kan aldrig säga att du inte kan
+            något om du inte gett det en ärlig chans”. Dagen efter påbörjade hon
+            manuset till ”Du kan inte fly ödet.” Paulina är lyckligast när hon
+            får vara tillsammans med sin familj, får skratta tillsammans med
+            vänner, försvinna in i andra världar, få vara i naturen, dricka vin
+            eller kaffe, lyssna på musik och yoga. Du kan inte fly ödet är
+            Paulinas debutantroman och den första delen i hennes trilogi.
+            Paulinas önskan är att när läsarna lägger ifrån sig hennes böcker,
+            ska det vara med ett leende och en varm känsla i bröstet.
+          </p>
+        </div>
+      </section>
+      <section class="about-books">
+        <h3 class="section-heading">Om mina böcker</h3>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              ”Ditt manus är ett av de bästa romance jag läst,jag fastnade
+              verkligen och kunde inte lägga ifrån mig det. Ofta känner jag inte
+              så.”
+            </div>
+            <div class="swiper-slide">
+              ”Ditt manus är ett av de bästa romance jag läst,jag fastnade
+              verkligen och kunde inte lägga ifrån mig det. Ofta känner jag inte
+              så.”
+            </div>
+            <div class="swiper-slide">
+              ”Ditt manus är ett av de bästa romance jag läst,jag fastnade
+              verkligen och kunde inte lägga ifrån mig det. Ofta känner jag inte
+              så.”
+            </div>
+          </div>
+        </div>
       </section>
     </div>
+    <!-- Swiper JS -->
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
