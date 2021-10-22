@@ -19,7 +19,7 @@ body {
     letter-spacing: 0.2rem;
 
     &::after {
-      @include pseudo($top: 0, $right: -2rem);
+      @include pseudo($top: 0, $right: -4rem);
       height: 100%;
       border: 1px solid var(--clr-primary);
     }
@@ -28,6 +28,10 @@ body {
   &__secondary-logo {
     &--top {
       font-size: clamp(1.3rem, 2vw, 1.6rem);
+    }
+
+    &--bottom {
+      font-weight: 600;
     }
   }
 }
@@ -48,14 +52,14 @@ body {
 }
 
 .video-controls {
-  @include position($pos: absolute, $top: 6rem, $left: 12.5rem);
+  @include position($pos: absolute, $top: 25rem, $left: 12.5rem);
   color: var(--clr-gray-light);
 
   &__icon {
-    font-size: 2rem;
+    font-size: 3rem;
 
     &:not(:first-child) {
-      margin-left: 1.5rem;
+      margin-left: 3rem;
     }
 
     &--play {
@@ -119,6 +123,15 @@ body {
 }
 
 .about-me {
-  background-color: red;
   margin-top: var(--section-spacing);
+  padding: var(--mobile-padding);
+
+  &__img {
+    margin: var(--mobile-el-spacing) 0;
+  }
+}
+
+.about-books {
+  margin-top: var(--section-spacing);
+  padding: var(--mobile-padding);
 }
