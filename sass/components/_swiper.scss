@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.swiper {
+  width: 24rem;
+  height: 32rem;
+  margin-top: 5rem;
+}
+
+.swiper-slide {
+  @include flex-config($align: center, $justify: center);
+  border-radius: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+  padding: 10rem 3rem;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: var(--clr-tertiary);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(10, 83, 167);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(2, 80, 69);
+}
