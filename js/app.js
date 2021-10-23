@@ -1,57 +1,17 @@
 const heroVideo = document.querySelector('.hero-container__video');
+const playControl = document.querySelector('.video-controls__icon--play');
 
-//Closure for play-pause video
-const playPauseVideo = () => {
-  const videoPlayBtn = document.querySelector('.video-controls__icon--play');
-  const videoPauseBtn = document.querySelector('.video-controls__icon--pause');
-  let isHeroVideoPlaying = true;
-
-  return (togglePlayVideo = () => {
-    if (isHeroVideoPlaying) {
-      videoPauseBtn.addEventListener('click', () => {
-        heroVideo.pause();
-        isHeroVideoPlaying = false;
-        videoPauseBtn.style.display = 'none';
-        videoPlayBtn.style.display = 'inline-block';
-      });
-    }
-    videoPlayBtn.addEventListener('click', () => {
-      heroVideo.play();
-      isHeroVideoPlaying = true;
-      videoPauseBtn.style.display = 'inline-block';
-      videoPlayBtn.style.display = 'none';
-    });
-  });
-};
-
-//Closure for mute-unmute video sound
-const playMuteSound = () => {
-  const videoMute = document.querySelector('.video-controls__icon--mute');
-  const videoUnMute = document.querySelector('.video-controls__icon--sound');
-  let isVideoMuted = true;
-
-  return (toggleVideoSound = () => {
-    if (isVideoMuted) {
-      videoMute.addEventListener('click', () => {
-        heroVideo.muted = false;
-        videoMute.style.display = 'none';
-        videoUnMute.style.display = 'inline-block';
-      });
-    }
-    videoUnMute.addEventListener('click', () => {
-      heroVideo.muted = true;
-      isVideoMuted = true;
-      videoUnMute.style.display = 'none';
-      videoMute.style.display = 'inline-block';
-    });
-  });
-};
-
-const toggleVideoPlay = playPauseVideo();
-const toggleSoundVideo = playMuteSound();
-
-toggleVideoPlay();
-toggleSoundVideo();
+playControl.addEventListener('click', () => {
+  if (!heroVideo.paused) {
+    heroVideo.pause();
+    playControl.classList.remove('far', 'fa-pause-circle');
+    playControl.classList.add('far', 'fa-play-circle');
+  } else {
+    heroVideo.play();
+    playControl.classList.remove('far', 'fa-play-circle');
+    playControl.classList.add('far', 'fa-pause-circle');
+  }
+});
 
 // ===================Swiper.js===========================
 const swiper = new Swiper('.mySwiper', {
