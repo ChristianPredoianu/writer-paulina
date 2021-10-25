@@ -1,0 +1,42 @@
+@use '../abstracts/' as *;
+
+.footer {
+  @include flex-config($direction: column, $align: center);
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  margin-top: var(--section-spacing);
+  padding: 5rem 2rem;
+
+  &__logo {
+    position: relative;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    margin: var(--section-spacing) 0;
+    text-align: center;
+
+    &::after {
+      @include pseudo($bottom: -1rem, $left: 0);
+      border-bottom: 1px solid var(--clr-gray-light);
+      width: 100%;
+    }
+  }
+}
+
+.footer-social-media {
+  @include flex-config($justify: space-around);
+  width: 50%;
+  font-size: 2rem;
+  margin: -2rem auto;
+}
+
+.footer-copyright {
+  @include flex-config($align: center);
+
+  margin-top: var(--section-spacing);
+
+  &__text {
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+}
