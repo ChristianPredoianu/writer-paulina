@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,14 +25,16 @@
   <body>
     <header>
       <nav class="nav">
-        <p class="nav__logo">Paulina Ny</p>
-        <div class="nav__secondary-logo">
-          <p class="nav__secondary-logo nav__secondary-logo--top">
-            Författarinna
-          </p>
-          <p class="nav__secondary-logo nav__secondary-logo--bottom">
-            Storge förlag
-          </p>
+        <div class="logo-wrapper">
+          <p class="nav__logo">Paulina Ny</p>
+          <div class="nav__secondary-logo">
+            <p class="nav__secondary-logo nav__secondary-logo--top">
+              Författarinna
+            </p>
+            <p class="nav__secondary-logo nav__secondary-logo--bottom">
+              Storge förlag
+            </p>
+          </div>
         </div>
         <div class="dark-mode-icon">
           <i class="far fa-moon dark-mode-icon__icon"></i>
@@ -42,28 +44,14 @@
           <i
             class="
               far
-              fa-play-circle
-              video-controls__icon video-controls__icon--play
-            "
-          ></i>
-          <i
-            class="
-              far
               fa-pause-circle
-              video-controls__icon video-controls__icon--pause
+              video-controls__icon video-controls__icon--play
             "
           ></i>
           <i
             class="
               fas
               fa-volume-mute
-              video-controls__icon video-controls__icon--mute
-            "
-          ></i>
-          <i
-            class="
-              fas
-              fa-volume-off
               video-controls__icon video-controls__icon--sound
             "
           ></i>
@@ -75,27 +63,38 @@
         </div>
       </nav>
     </header>
-    <div class="overlay"></div>
-    <div class="hero-container">
-      <video src="./assets/video.mp4" class="hero-container__video"></video>
+
+    <div class="hero">
+      <div class="overlay"></div>
+      <video
+        src="./assets/flyodet-final.mp4"
+        class="hero__video"
+        autoplay
+        muted
+        loop
+      ></video>
       <div class="hero-text">
         <h1 class="hero-text__heading">"Du kan inte fly ödet"</h1>
-        <h2 class="hero-text__sub-heading">Av Paulina Ny</h2>
+        <h2 class="hero-text__subheading">Av Paulina Ny</h2>
         <p class="hero-text__paragraph">
           Du kan inte fly ödet är en omtumlande kärleksroman kring två människor
           som förs samman av en slump, eller är det ödet som bestämt att de ska
           ses? Iris bästa kompis Ella verkar i alla fall tro det och mycket
           riktigt kommer Iris och Jaces vägar mötas igen.
         </p>
+        <a href="#" class="cta-btn hero-text__cta-btn">Köp Nu</a>
+        <div class="arrow">
+          <a href="#about"><i class="fas fa-arrow-down arrow__icon"></i></a>
+        </div>
       </div>
     </div>
     <div class="container">
-      <section class="about-me">
+      <section class="about-me" id="about">
         <h3 class="section-heading">Om Mig</h3>
         <h4 class="section-heading__subheading">Romanceförfattarinna</h4>
         <div class="about-me-wrapper">
-          <img src="./assets/bild1.jpg" alt="" class="about-me__img" />
-          <p class="about-me__paragraph">
+          <img src="./assets/bild1.jpg" alt="" class="about-me-wrapper__img" />
+          <p class="about-me-wrapper__paragraph">
             Paulina Ny är född 1989, bor i ett samhälle i Blekinge tillsammans
             med sin man, två barn och nakenkatten Dallas. Hon studerar till
             Studie- och yrkesvägledare på Malmö Universitet. Paulina har alltid
@@ -135,10 +134,75 @@
               verkligen och kunde inte lägga ifrån mig det. Ofta känner jag inte
               så.”
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="publications">
+        <h3 class="section-heading">Publikationer</h3>
+        <div class="publications-wrapper">
+          <div>
+            <img
+              src="./assets/fly-odet.jpg"
+              alt="Fly ödet bokomslag"
+              class="publications__img"
+            />
+            <a href="#" class="cta-btn">Köp Nu</a>
+          </div>
+          <p class="publications-paragraph">
+            Flygrädda Iris måste utmana sin rädsla när hennes syster Viola, som
+            är bosatt i England, ska gifta sig. Med möhippan som nalkas och
+            flygresan framför sig, virvlar hon in likt ett yrväder av kaos på
+            Köpenhamns flygplats. Med en och annan drink för mycket faller hon
+            bokstavligen i knät på en mörkögd främling. En främling som väcker
+            känslor inom henne som hon trodde försvunnit för gott. Jace är en
+            uppåtstigande musiker, som livet borde leka för, men som istället
+            bär på sorg och skuld. Det väcker en ilska och en vilja att stöta
+            bort alla i hans närhet. Men det är något med Iris som han inte kan
+            sätta fingret på. Han vacklar i sitt löfte han givit sig själv att
+            aldrig släppa in en kvinna i sitt liv igen. Men när de landar på
+            flygplatsen är hon borta innan han hinner blinka. Med tankar i ett
+            enda kaos och gitarren över axeln stegar han ensam ut i sommarregnet
+            på Manchester flygplats. Du kan inte fly ödet är en omtumlande
+            kärleksroman kring två människor som förs samman av en slump, eller
+            är det ödet som bestämt att de ska ses? Iris bästa kompis Ella
+            verkar i alla fall tro det och mycket riktigt kommer Iris och Jaces
+            vägar mötas igen.
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact-wrapper">
+          <div class="contact-box">
+            <p>Kontakta Mig</p>
+          </div>
+          <div class="contact-social-icons">
+            <i class="fab fa-instagram contact-social-icons__icon"></i>
+            <i class="fab fa-facebook contact-social-icons__icon"></i>
+            <i class="fas fa-envelope contact-social-icons__icon"></i>
           </div>
         </div>
       </section>
     </div>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <p class="footer__logo">Paulina Ny</p>
+
+        <div class="footer-social-media">
+          <i class="fab fa-instagram footer-social-media__icon"></i>
+          <i class="fab fa-facebook footer-social-media__icon"></i>
+          <i class="fas fa-envelope footer-social-media__icon"></i>
+        </div>
+        <div class="footer-copyright">
+          <a href="#">
+            <i class="fas fa-copyright footer-copyright__icon"></i
+          ></a>
+          <p class="footer-copyright__text">2022 by Christian Predoianu</p>
+        </div>
+      </div>
+    </footer>
     <!-- Swiper JS -->
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
