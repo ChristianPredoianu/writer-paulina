@@ -20,9 +20,17 @@
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color: rgb(10, 83, 167);
+  background-color: #04b882;
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: rgb(2, 80, 69);
+  background-color: #1399a7;
+}
+
+.swiper-button-next {
+  right: -5rem !important;
+}
+
+.swiper-button-prev {
+  left: -5rem !important;
 }
