@@ -87,8 +87,15 @@
   }
 
   @if $breakpoint == md {
-    @media (min-width: 65em) {
-      //1040px
+    @media (min-width: 64em) {
+      //1024px
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media (min-width: 80em) {
+      //1280px
       @content;
     }
   }
