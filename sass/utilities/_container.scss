@@ -4,7 +4,17 @@
   width: 100%;
   margin: 0 auto;
 
+  @include respond(sm) {
+    //Container width
+    max-width: 64rem;
+  }
+
   @include respond(md) {
+    //Container width
+    max-width: 102.4rem;
+  }
+
+  @include respond(lg) {
     //Container width
     max-width: 128rem;
   }
