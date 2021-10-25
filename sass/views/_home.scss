@@ -1,16 +1,21 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-body {
-  min-height: 100vh;
-}
-
 .nav {
   @include position($pos: absolute, $top: 1rem);
-  @include flex-config($align: center, $justify: space-around);
+  @include flex-config($align: center, $justify: space-between);
+
   width: 100%;
   z-index: 20;
   color: var(--clr-primary);
+
+  @include respond(sm) {
+    padding: 2rem;
+  }
+
+  @include respond(lg) {
+    padding: 2rem 10rem;
+  }
 
   &__logo {
     position: relative;
@@ -19,13 +24,15 @@ body {
     letter-spacing: 0.2rem;
 
     &::after {
-      @include pseudo($top: 0, $right: -4rem);
+      @include pseudo($top: 0, $right: -3rem);
       height: 100%;
       border: 1px solid var(--clr-primary);
     }
   }
 
   &__secondary-logo {
+    margin-left: 3rem;
+
     &--top {
       font-size: clamp(1.3rem, 2vw, 1.6rem);
     }
@@ -36,38 +43,66 @@ body {
   }
 }
 
+.logo-wrapper {
+  @include flex-config($justify: center, $align: center);
+  width: 100%;
+
+  @include respond(sm) {
+    width: auto;
+  }
+}
+
 .dark-mode-icon {
   @include position($pos: absolute, $top: 6rem, $left: 2rem);
   color: var(--clr-gray-light);
   text-align: center;
 
+  @include respond(sm) {
+    position: static;
+  }
+
   &__icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+    @include respond(sm) {
+      margin-top: 1.5rem;
+    }
+
+    @include respond(lg) {
+      font-size: 3rem;
+    }
   }
 
   &__text {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+
+    @include respond(lg) {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
   }
 }
 
 .video-controls {
-  @include position($pos: absolute, $top: 25rem, $left: 12.5rem);
+  @include position($pos: absolute, $top: 6rem, $left: 10rem);
+  @include flex-config($justify: space-between);
+  margin: 0, auto;
   color: var(--clr-gray-light);
 
-  &__icon {
-    font-size: 3rem;
+  @include respond(sm) {
+    position: static;
+  }
 
-    &:not(:first-child) {
+  &__icon {
+    font-size: 1.5rem;
+
+    &:not(:first-of-type) {
       margin-left: 3rem;
     }
 
-    &--play {
-      display: none;
-    }
-
-    &--mute {
-      display: none;
+    @include respond(lg) {
+      font-size: 3rem;
     }
   }
 }
@@ -76,12 +111,41 @@ body {
   @include position($pos: absolute, $top: 6rem, $right: 4rem);
   color: var(--clr-gray-light);
 
+  @include respond(sm) {
+    position: static;
+  }
+
+  @include respond(lg) {
+    @include position($pos: absolute, $top: 30rem, $right: 13rem);
+    @include flex-config($direction: column);
+  }
+
   &__icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
+
+    @include respond(lg) {
+      font-size: 3rem;
+    }
 
     &:not(:first-child) {
       margin-left: 2rem;
+
+      @include respond(lg) {
+        margin: 3rem 0 0 0;
+      }
     }
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__video {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 
@@ -89,49 +153,159 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgb(12, 55, 21, 0.45);
-  z-index: 10;
-}
-
-.hero-container {
-  position: relative;
-
-  &__video {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-  }
+  background-color: rgba(21, 91, 88, 0.4);
 }
 
 .hero-text {
-  @include position($pos: absolute, $bottom: 0, $left: 0);
-  width: 100%;
+  @include position($pos: absolute, $top: 25%);
+  padding: 3rem;
   color: var(--clr-primary);
-  background-color: rgb(0, 0, 0, 0.5);
-  padding: 5rem;
-  z-index: 20;
 
-  &__sub-heading {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+  @include respond(lg) {
+    width: 45%;
+    padding: 2rem 10rem;
+  }
+
+  &__subheading {
+    margin-top: 0.5rem;
   }
 
   &__paragraph {
-    color: var(--clr-gray-light);
-    margin-top: 2rem;
+    margin-top: 1rem;
+
+    @include respond(lg) {
+      margin-top: 3rem;
+    }
+  }
+
+  &__cta-btn {
+    display: none;
+    margin: 5rem 0;
+    align-self: flex-start;
+
+    @include respond(lg) {
+      display: block;
+      width: 50%;
+    }
+  }
+
+  .arrow {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+
+    &__icon {
+      font-size: 2rem;
+      cursor: pointer;
+
+      transition: 0.2s;
+
+      &:hover {
+        transform: translateY(0.5rem);
+        color: var(--clr-primary);
+      }
+
+      @include respond(lg) {
+        font-size: 4rem;
+      }
+    }
   }
 }
 
 .about-me {
   margin-top: var(--section-spacing);
   padding: var(--mobile-padding);
+}
+
+.about-me-wrapper {
+  @include respond(md) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: var(--section-spacing);
+  }
 
   &__img {
-    margin: var(--mobile-el-spacing) 0;
+    margin: var(--mobile-el-spacing) auto;
+
+    @include respond(md) {
+      width: 30%;
+    }
+  }
+
+  &__paragraph {
+    @include respond(md) {
+      width: 60%;
+    }
   }
 }
 
 .about-books {
   margin-top: var(--section-spacing);
   padding: var(--mobile-padding);
+}
+
+.publications {
+  margin-top: var(--section-spacing);
+  padding: var(--mobile-padding);
+
+  &__img {
+    margin: var(--mobile-el-spacing) auto;
+  }
+}
+
+.contact {
+  margin: var(--section-spacing) auto;
+  padding: var(--mobile-padding);
+}
+
+.contact-wrapper {
+  @include flex-config($justify: end);
+  position: relative;
+  background-color: rgb(21, 91, 88, 0.2);
+  padding: 1rem 0;
+
+  @include respond(sm) {
+    justify-content: center;
+    padding: 5rem 0;
+  }
+}
+
+.contact-box {
+  @include position($pos: absolute, $top: -1rem, $left: 2rem);
+  background-color: var(--clr-tertiary);
+  color: var(--clr-primary);
+  padding: 6rem 1rem;
+  text-transform: uppercase;
+}
+
+.contact-social-icons {
+  @include flex-config($direction: column);
+  margin-right: 5rem;
+
+  @include respond(sm) {
+    @include flex-config($direction: row, $justify: space-around);
+    width: 30%;
+    margin: 0 0 0 10rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: var(--clr-secondary);
+
+    &:not(:first-of-type) {
+      margin-top: 2rem;
+
+      @include respond(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  &__text {
+    font-size: 1rem;
+  }
 }
