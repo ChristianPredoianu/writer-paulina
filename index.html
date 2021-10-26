@@ -65,8 +65,8 @@
     </header>
 
     <div class="hero">
-      <div class="overlay"></div>
       <video
+        poster="./assets/hero-img.jpg"
         src="./assets/flyodet-final.mp4"
         class="hero__video"
         autoplay
@@ -83,6 +83,7 @@
           riktigt kommer Iris och Jaces vägar mötas igen.
         </p>
         <a href="#" class="cta-btn hero-text__cta-btn">Köp Nu</a>
+
         <div class="arrow">
           <a href="#about"><i class="fas fa-arrow-down arrow__icon"></i></a>
         </div>
@@ -143,15 +144,15 @@
       <section class="publications">
         <h3 class="section-heading">Publikationer</h3>
         <div class="publications-wrapper">
-          <div>
+          <div class="publications-img-wrapper">
             <img
               src="./assets/fly-odet.jpg"
               alt="Fly ödet bokomslag"
-              class="publications__img"
+              class="publications-img-wrapper__img"
             />
             <a href="#" class="cta-btn">Köp Nu</a>
           </div>
-          <p class="publications-paragraph">
+          <p class="publications-wrapper__paragraph">
             Flygrädda Iris måste utmana sin rädsla när hennes syster Viola, som
             är bosatt i England, ska gifta sig. Med möhippan som nalkas och
             flygresan framför sig, virvlar hon in likt ett yrväder av kaos på
@@ -196,10 +197,14 @@
           <i class="fas fa-envelope footer-social-media__icon"></i>
         </div>
         <div class="footer-copyright">
-          <a href="#">
-            <i class="fas fa-copyright footer-copyright__icon"></i
-          ></a>
-          <p class="footer-copyright__text">2022 by Christian Predoianu</p>
+          <i class="fas fa-copyright footer-copyright__icon"></i>
+          <p class="footer-copyright__text">2022 Christian Predoianu</p>
+        </div>
+        <div class="footer-copyright">
+          <i class="fas fa-copyright footer-copyright__icon"></i>
+          <p class="footer-copyright__text">
+            2022 Boktrailer @hultmarkproduction
+          </p>
         </div>
       </div>
     </footer>
@@ -207,5 +212,6 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/darkMode.js"></script>
   </body>
 </html>

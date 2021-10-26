@@ -1,13 +1,16 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-.nav {
-  @include position($pos: absolute, $top: 1rem);
-  @include flex-config($align: center, $justify: space-between);
-
+header {
+  @include position($pos: absolute, $top: 0, $left: 0);
   width: 100%;
-  z-index: 20;
+  z-index: 800;
+}
+
+.nav {
+  @include flex-config($align: center, $justify: space-between);
   color: var(--clr-primary);
+  padding: 1rem;
 
   @include respond(sm) {
     padding: 2rem;
@@ -44,7 +47,7 @@
 }
 
 .logo-wrapper {
-  @include flex-config($justify: center, $align: center);
+  @include flex-config($justify: space-around, $align: center);
   width: 100%;
 
   @include respond(sm) {
@@ -96,6 +99,11 @@
 
   &__icon {
     font-size: 1.5rem;
+    display: none;
+
+    @include respond(md) {
+      display: block;
+    }
 
     &:not(:first-of-type) {
       margin-left: 3rem;
@@ -108,7 +116,7 @@
 }
 
 .social-media-icons {
-  @include position($pos: absolute, $top: 6rem, $right: 4rem);
+  @include position($pos: absolute, $top: 7rem, $right: 4rem);
   color: var(--clr-gray-light);
 
   @include respond(sm) {
@@ -138,28 +146,61 @@
 }
 
 .hero {
-  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  background-image: url('../../assets/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include respond(md) {
+    background-image: none;
+  }
+
+  &__heading {
+    position: relative;
+  }
 
   &__video {
-    height: 100%;
+    display: none;
+    height: 100vh;
     object-fit: cover;
     width: 100%;
+
+    @include respond(md) {
+      display: block;
+    }
   }
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(21, 91, 88, 0.4);
-}
-
 .hero-text {
-  @include position($pos: absolute, $top: 25%);
-  padding: 3rem;
+  @include flex-config($direction: column, $justify: center);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
   color: var(--clr-primary);
+  padding: 3rem;
+  z-index: 400;
+
+  @include respond(sm) {
+    padding: 3rem 5rem;
+  }
+
+  @include respond(md) {
+    @include position($pos: absolute, $top: 0, $left: 0);
+    width: 50%;
+  }
+
+  &::after {
+    @include pseudo;
+    inset: 0;
+    background-color: var(--hero-overlay);
+    z-index: -1;
+  }
+
+  &__heading {
+    padding-top: 10rem;
+  }
 
   @include respond(lg) {
     width: 45%;
@@ -179,9 +220,13 @@
   }
 
   &__cta-btn {
-    display: none;
     margin: 5rem 0;
     align-self: flex-start;
+    background-color: rgb(10, 120, 113, 0.5);
+
+    &:hover {
+      background-color: var(--clr-tertiary);
+    }
 
     @include respond(lg) {
       display: block;
@@ -249,9 +294,27 @@
 .publications {
   margin-top: var(--section-spacing);
   padding: var(--mobile-padding);
+}
 
-  &__img {
-    margin: var(--mobile-el-spacing) auto;
+.publications-wrapper {
+  @include respond(md) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: var(--section-spacing);
+  }
+
+  &__paragraph {
+    @include respond(md) {
+      width: 60%;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.publications-img-wrapper {
+  @include respond(md) {
+    width: 30%;
   }
 }
 
@@ -292,7 +355,7 @@
 
   &__icon {
     font-size: 2rem;
-    color: var(--clr-secondary);
+    color: var(--social-media-icons);
 
     &:not(:first-of-type) {
       margin-top: 2rem;
