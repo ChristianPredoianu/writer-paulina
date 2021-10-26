@@ -22,8 +22,16 @@
     margin: 5rem auto;
   }
 
+  @include respond(md) {
+    width: 70%;
+  }
+
   &:active {
     transform: translateY(1px);
+    color: var(--clr-primary);
+  }
+
+  &:focus {
     color: var(--clr-primary);
   }
 
