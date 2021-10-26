@@ -1,5 +1,6 @@
 const heroVideo = document.querySelector('.hero__video');
 
+// ===================VIDEO CONTROLS===========================
 function togglePlayVideo() {
   const playControl = document.querySelector('.video-controls__icon--play');
   playControl.addEventListener('click', () => {
