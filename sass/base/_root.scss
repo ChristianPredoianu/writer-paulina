@@ -6,9 +6,10 @@
   --clr-primary: #f8f8f8;
   --clr-secondary: #141414;
   --clr-tertiary: #0a7871;
-
   --clr-gray-light: #d4d4d4;
   --clr-link-hvr: #1f7ffd;
+  --clr-hero-overlay: rgba(3, 3, 3, 0.5);
+  --clr-hero-overlay-dark: rgba(3, 3, 3, 0.7);
 
   /*=============================SPACINGS==================================*/
   --section-spacing: 5rem;
@@ -16,6 +17,15 @@
   @include respond(sm) {
     --section-spacing: 10rem;
   }
+
   --mobile-el-spacing: 3rem;
   --mobile-padding: 3rem;
+
+  /*=============================DARK MODE==================================*/
+
+  --foreground: var(--clr-secondary);
+  --background: var(--clr-primary);
+
+  --social-media-icons: var(--clr-secondary);
+  --hero-overlay: var(--clr-hero-overlay);
 }
