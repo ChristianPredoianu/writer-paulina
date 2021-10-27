@@ -1,150 +1,6 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-header {
-  @include position($pos: absolute, $top: 0, $left: 0);
-  width: 100%;
-  z-index: 800;
-}
-
-.nav {
-  @include flex-config($align: center, $justify: space-between);
-  color: var(--clr-primary);
-  padding: 1rem;
-
-  @include respond(sm) {
-    padding: 2rem;
-  }
-
-  @include respond(lg) {
-    padding: 2rem 10rem;
-  }
-
-  &__logo {
-    position: relative;
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-style: italic;
-    letter-spacing: 0.2rem;
-
-    &::after {
-      @include pseudo($top: 0, $right: -3rem);
-      height: 100%;
-      border: 1px solid var(--clr-primary);
-    }
-  }
-
-  &__secondary-logo {
-    margin-left: 3rem;
-
-    &--top {
-      font-size: clamp(1.3rem, 2vw, 1.6rem);
-    }
-
-    &--bottom {
-      font-weight: 600;
-    }
-  }
-}
-
-.logo-wrapper {
-  @include flex-config($justify: space-around, $align: center);
-  width: 100%;
-
-  @include respond(sm) {
-    width: auto;
-  }
-}
-
-.dark-mode-icon {
-  @include position($pos: absolute, $top: 6rem, $left: 2rem);
-  color: var(--clr-gray-light);
-  text-align: center;
-
-  @include respond(sm) {
-    position: static;
-  }
-
-  &__icon {
-    font-size: 1.5rem;
-
-    @include respond(sm) {
-      margin-top: 1.5rem;
-    }
-
-    @include respond(lg) {
-      font-size: 3rem;
-    }
-  }
-
-  &__text {
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-
-    @include respond(lg) {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-  }
-}
-
-.video-controls {
-  @include position($pos: absolute, $top: 6rem, $left: 10rem);
-  @include flex-config($justify: space-between);
-  margin: 0, auto;
-  color: var(--clr-gray-light);
-
-  @include respond(sm) {
-    position: static;
-  }
-
-  &__icon {
-    font-size: 1.5rem;
-    display: none;
-
-    @include respond(md) {
-      display: block;
-    }
-
-    &:not(:first-of-type) {
-      margin-left: 3rem;
-    }
-
-    @include respond(lg) {
-      font-size: 3rem;
-    }
-  }
-}
-
-.social-media-icons {
-  @include position($pos: absolute, $top: 7rem, $right: 4rem);
-  color: var(--clr-gray-light);
-
-  @include respond(sm) {
-    position: static;
-  }
-
-  @include respond(lg) {
-    @include position($pos: absolute, $top: 30rem, $right: 13rem);
-    @include flex-config($direction: column);
-  }
-
-  &__icon {
-    font-size: 1.5rem;
-
-    @include respond(lg) {
-      font-size: 3rem;
-    }
-
-    &:not(:first-child) {
-      margin-left: 2rem;
-
-      @include respond(lg) {
-        margin: 3rem 0 0 0;
-      }
-    }
-  }
-}
-
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -265,24 +121,61 @@ header {
 
 .about-me-wrapper {
   @include respond(md) {
-    display: flex;
-    justify-content: space-between;
-
+    @include flex-config($justify: space-between, $align: center);
     margin-top: var(--section-spacing);
-  }
-
-  &__img {
-    margin: var(--mobile-el-spacing) auto;
-
-    @include respond(md) {
-      width: 30%;
-    }
   }
 
   &__paragraph {
     @include respond(md) {
       width: 60%;
     }
+  }
+}
+
+.about-img-container {
+  position: relative;
+
+  &::after {
+    @include pseudo($top: -10%, $left: 9%);
+    width: 70%;
+    height: 120%;
+    background: rgb(60, 44, 40);
+    background: linear-gradient(
+      90deg,
+      rgba(60, 44, 40, 1) 0%,
+      rgba(143, 67, 0, 1) 100%
+    );
+    border-radius: 50%;
+    z-index: -1;
+
+    @include respond(md) {
+      top: 13%;
+      width: 80%;
+      height: 60%;
+    }
+
+    @include respond(lg) {
+      top: 10%;
+      height: 70%;
+    }
+  }
+
+  @include respond(md) {
+    width: 30%;
+  }
+
+  &__img {
+    margin: calc(var(--section-spacing) + 5rem) auto;
+    border-radius: 50%;
+    width: 60%;
+
+    @include respond(md) {
+      margin: var(--section-spacing) auto;
+    }
+
+    /*  @include respond(md) {
+      width: 100%;
+    } */
   }
 }
 
@@ -298,9 +191,7 @@ header {
 
 .publications-wrapper {
   @include respond(md) {
-    display: flex;
-    justify-content: space-between;
-
+    @include flex-config($justify: space-between);
     margin-top: var(--section-spacing);
   }
 
@@ -312,9 +203,30 @@ header {
   }
 }
 
+.publications-video-wrapper {
+  position: relative;
+  margin: var(--section-spacing) 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+
+  &__video {
+    @include position($pos: absolute, $top: 0, $left: 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  @include respond(md) {
+    display: none;
+  }
+}
+
 .publications-img-wrapper {
   @include respond(md) {
     width: 30%;
+  }
+
+  &__img {
+    margin: 2rem auto;
   }
 }
 
