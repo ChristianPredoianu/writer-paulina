@@ -36,10 +36,11 @@ toggleVideoSound();
 
 // ===================Swiper.js===========================
 const swiper = new Swiper('.mySwiper', {
-  effect: 'cards',
-  grabCursor: true,
+  speed: 600,
+  parallax: true,
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
