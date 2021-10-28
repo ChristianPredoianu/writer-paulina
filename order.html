@@ -4,7 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beställ</title>
+    <title>Paulina Ny | Beställ Fly Ödet</title>
+
+    <meta
+      name="description"
+      content="Paulina Ny. Älskar berättelser, andras historier och att
+  hitta på egna, att försvinna in i en annan tid och en annan värld. Köp min nya bok Fly ödet"
+    />
+    <meta property="og:title" content="Paulina Ny | Författarinna" />
+    <meta property="og:description" content="Beställ Fly Ödet" />
+    <meta property="og:image" content="./assets/fly-odet.jpg" />
+    <meta property="og:url" content="http://paulinany.se" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,14 +51,16 @@
     <header>
       <nav class="nav nav--order">
         <div class="logo-wrapper">
-          <p class="nav__logo">Paulina Ny</p>
+          <a href="index.html"><p class="nav__logo">Paulina Ny</p></a>
           <div class="nav__secondary-logo">
             <p class="nav__secondary-logo nav__secondary-logo--top">
               Författarinna
             </p>
-            <p class="nav__secondary-logo nav__secondary-logo--bottom">
-              Storge förlag
-            </p>
+            <a href="https://storge.se/" rel="noopener" target="_blank">
+              <p class="nav__secondary-logo nav__secondary-logo--bottom">
+                Storge förlag
+              </p></a
+            >
           </div>
         </div>
         <div class="dark-mode-icon dark-mode-icon--order">
@@ -38,9 +69,28 @@
         </div>
 
         <div class="social-media-icons social-media-icons--order">
-          <i class="fab fa-instagram social-media-icons__icon"></i>
-          <i class="fab fa-facebook social-media-icons__icon"></i>
-          <i class="fas fa-envelope social-media-icons__icon"></i>
+          <a
+            class="social-media-icons__icon"
+            href="https://www.instagram.com/paulinanyh/?hl=sv"
+            rel="noopener"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i
+          ></a>
+          <a
+            class="social-media-icons__icon"
+            href="https://www.facebook.com/paulina.olsson.92"
+            rel="noopener"
+            target="_blank"
+          >
+            <i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="mailto:paulina@paulinany.se"
+            class="social-media-icons__icon"
+          >
+            <i class="fas fa-envelope"></i
+          ></a>
         </div>
       </nav>
     </header>
@@ -73,19 +123,53 @@
         <p class="footer__logo">Paulina Ny</p>
 
         <div class="footer-social-media">
-          <i class="fab fa-instagram footer-social-media__icon"></i>
-          <i class="fab fa-facebook footer-social-media__icon"></i>
-          <i class="fas fa-envelope footer-social-media__icon"></i>
+          <a
+            class="footer-social-media__icon"
+            href="https://www.instagram.com/paulinanyh/?hl=sv"
+            aria-label="Instagram"
+            rel="noopener"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            class="footer-social-media__icon"
+            href="https://www.facebook.com/paulina.olsson.92"
+            aria-label="Facebook"
+            rel="noopener"
+            target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="mailto:paulina@paulinany.se"
+            aria-label="Mail"
+            class="footer-social-media__icon"
+          >
+            <i class="fas fa-envelope"></i
+          ></a>
         </div>
         <div class="footer-copyright">
           <i class="fas fa-copyright footer-copyright__icon"></i>
-          <p class="footer-copyright__text">2022 Christian Predoianu</p>
+          <a
+            href="https://github.com/ChristianPredoianu"
+            aria-label="Github"
+            rel="noopener"
+            target="_blank"
+          >
+            <p class="footer-copyright__text">2022 Christian Predoianu</p></a
+          >
         </div>
         <div class="footer-copyright">
           <i class="fas fa-copyright footer-copyright__icon"></i>
-          <p class="footer-copyright__text">
-            2022 Boktrailer @hultmarkproduction
-          </p>
+          <a
+            href="https://www.instagram.com/hultmarkproduction/reels/"
+            aria-label="Instagram"
+            rel="noopener"
+            target="_blank"
+          >
+            <p class="footer-copyright__text">
+              2022 Boktrailer @hultmarkproduction
+            </p></a
+          >
         </div>
       </div>
     </footer>
