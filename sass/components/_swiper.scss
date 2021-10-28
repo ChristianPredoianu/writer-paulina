@@ -1,35 +1,63 @@
 @use '../abstracts/' as *;
 
+.swiper-overlay {
+  @include position($pos: absolute, $top: 0, $left: 0);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 500;
+}
+
 .swiper {
-  width: 24rem;
-  height: 32rem;
-  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+  margin: var(--section-spacing) auto 0 auto;
+  box-shadow: var(--box-shadow);
 }
 
 .swiper-slide {
-  @include flex-config($align: center, $justify: center);
-  border-radius: 1.8rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: var(--clr-primary);
-  padding: 10rem 3rem;
+  height: 100%;
+  position: relative;
+  font-size: 1.5rem;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 14rem 6rem;
+  margin: auto 0;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-color: var(--clr-tertiary);
+.swiper-text-span {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-style: italic;
 }
 
-.swiper-slide:nth-child(2n) {
-  background-color: rgb(4, 185, 131);
+.parallax-bg {
+  @include position($pos: absolute, $top: 0, $left: 0);
+  width: 130%;
+  height: 100%;
+  background-image: url('../../assets/parallax-img.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }
 
-.swiper-slide:nth-child(3n) {
-  background-color: #1399a7;
+.swiper-slide .title {
+  font-size: 3rem;
+}
+
+.swiper-slide .subtitle {
+  font-size: 2rem;
+}
+
+.swiper-slide .text {
+  font-size: 1.2rem;
+  max-width: 40rem;
+  line-height: 1.3;
 }
 
 .swiper-button-next {
-  display: none;
-  right: -5rem !important;
+  color: #fff !important;
 
   @include respond(md) {
     display: block;
@@ -37,10 +65,13 @@
 }
 
 .swiper-button-prev {
-  display: none;
-  left: -5rem !important;
+  color: #fff !important;
 
   @include respond(md) {
     display: block;
   }
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
 }
