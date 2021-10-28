@@ -1,119 +1,6 @@
 @use '../abstracts/' as *;
 @use '../utilities/' as *;
 
-.hero {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url('../../assets/hero-img.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @include respond(md) {
-    background-image: none;
-  }
-
-  &__heading {
-    position: relative;
-  }
-
-  &__video {
-    display: none;
-    height: 100vh;
-    object-fit: cover;
-    width: 100%;
-
-    @include respond(md) {
-      display: block;
-    }
-  }
-}
-
-.hero-text {
-  @include flex-config($direction: column, $justify: center);
-  position: relative;
-  min-height: 100vh;
-  width: 100%;
-  color: var(--clr-primary);
-  padding: 3rem;
-  z-index: 400;
-
-  @include respond(sm) {
-    padding: 3rem 5rem;
-  }
-
-  @include respond(md) {
-    @include position($pos: absolute, $top: 0, $left: 0);
-    width: 50%;
-  }
-
-  &::after {
-    @include pseudo;
-    inset: 0;
-    background-color: var(--hero-overlay);
-    z-index: -1;
-  }
-
-  &__heading {
-    padding-top: 10rem;
-  }
-
-  @include respond(lg) {
-    width: 45%;
-    padding: 2rem 10rem;
-  }
-
-  &__subheading {
-    margin-top: 0.5rem;
-  }
-
-  &__paragraph {
-    margin-top: 1rem;
-
-    @include respond(lg) {
-      margin-top: 3rem;
-    }
-  }
-
-  &__cta-btn {
-    margin: 5rem 0;
-    align-self: flex-start;
-    background-color: rgb(10, 120, 113, 0.5);
-
-    &:hover {
-      background-color: var(--clr-tertiary);
-    }
-
-    @include respond(lg) {
-      display: block;
-      width: 50%;
-    }
-  }
-
-  .arrow {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    margin-top: 5rem;
-
-    &__icon {
-      font-size: 2rem;
-      cursor: pointer;
-
-      transition: 0.2s;
-
-      &:hover {
-        transform: translateY(0.5rem);
-        color: var(--clr-primary);
-      }
-
-      @include respond(lg) {
-        font-size: 4rem;
-      }
-    }
-  }
-}
-
 .about-me {
   margin-top: var(--section-spacing);
   padding: var(--mobile-padding);
@@ -136,7 +23,7 @@
   position: relative;
 
   &::after {
-    @include pseudo($top: -10%, $left: 9%);
+    @include pseudo($top: -15%, $left: 13%);
     width: 70%;
     height: 120%;
     background: rgb(60, 44, 40);
@@ -147,9 +34,11 @@
     );
     border-radius: 50%;
     z-index: -1;
+    box-shadow: var(--box-shadow);
 
     @include respond(md) {
-      top: 13%;
+      top: 15%;
+      left: 7%;
       width: 80%;
       height: 60%;
     }
@@ -172,10 +61,6 @@
     @include respond(md) {
       margin: var(--section-spacing) auto;
     }
-
-    /*  @include respond(md) {
-      width: 100%;
-    } */
   }
 }
 
@@ -198,7 +83,7 @@
   &__paragraph {
     @include respond(md) {
       width: 60%;
-      margin-top: 3rem;
+      margin-top: 10rem;
     }
   }
 }
@@ -227,6 +112,7 @@
 
   &__img {
     margin: 2rem auto;
+    box-shadow: var(--box-shadow);
   }
 }
 
@@ -257,7 +143,7 @@
 
 .contact-social-icons {
   @include flex-config($direction: column);
-  margin-right: 5rem;
+  margin-right: 4rem;
 
   @include respond(sm) {
     @include flex-config($direction: row, $justify: space-around);
@@ -268,6 +154,7 @@
   &__icon {
     font-size: 2rem;
     color: var(--social-media-icons);
+    transition: all 0.2s;
 
     &:not(:first-of-type) {
       margin-top: 2rem;
@@ -275,6 +162,10 @@
       @include respond(sm) {
         margin-top: 0;
       }
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

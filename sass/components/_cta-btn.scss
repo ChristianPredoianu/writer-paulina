@@ -12,8 +12,7 @@
   text-transform: uppercase;
   border-radius: 2rem;
   letter-spacing: 0.1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: var(--box-shadow);
   transition: all 0.2s ease-in;
 
   @include respond(sm) {
@@ -36,7 +35,7 @@
   }
 
   &:hover {
-    background-color: rgba(7, 148, 141);
+    background-color: #07948d;
     color: var(--clr-primary);
   }
 }
