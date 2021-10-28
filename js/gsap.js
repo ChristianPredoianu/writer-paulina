@@ -34,7 +34,6 @@ timeline(oddSections);
 /*===========================IMG ANIMATION============================ */
 
 gsap.registerPlugin(CSSRulePlugin);
-
 const imgAfter = CSSRulePlugin.getRule('.about-img-container::after');
 
 gsap.to(imgAfter, {
