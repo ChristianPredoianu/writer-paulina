@@ -16,8 +16,8 @@
   transition: all 0.2s ease-in;
 
   @include respond(sm) {
-    width: 35%;
     display: block;
+    width: 35%;
     margin: 5rem auto;
   }
 

@@ -299,8 +299,8 @@ a:hover, a:focus {
 }
 @media (min-width: 40em) {
   .cta-btn {
-    width: 35%;
     display: block;
+    width: 35%;
     margin: 5rem auto;
   }
 }
