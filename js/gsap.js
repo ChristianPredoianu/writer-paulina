@@ -6,8 +6,8 @@ gsap.to('progress', {
   scrollTrigger: { scrub: 0.3 },
 });
 
-const evenSections = gsap.utils.toArray('.even-section');
-const oddSections = gsap.utils.toArray('.odd-section');
+const evenSections = gsap.utils.toArray('.even-section'),
+  oddSections = gsap.utils.toArray('.odd-section');
 
 function timeline(array) {
   array.forEach((section) => {

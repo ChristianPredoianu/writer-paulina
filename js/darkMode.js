@@ -1,5 +1,5 @@
-const darkModeIcon = document.querySelector('.dark-mode-icon__icon');
-const body = document.querySelector('body');
+const darkModeIcon = document.querySelector('.dark-mode-icon__icon'),
+  body = document.querySelector('body');
 let darkMode = localStorage.getItem('darkMode');
 
 window.addEventListener('load', () => {
