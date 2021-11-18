@@ -134,7 +134,7 @@
 }
 
 .contact-box {
-  @include position($pos: absolute, $top: -1rem, $left: 2rem);
+  @include position($pos: absolute, $top: -0.5rem, $left: 2rem);
   background-color: var(--clr-tertiary);
   color: var(--clr-primary);
   padding: 6rem 1rem;
