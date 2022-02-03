@@ -52,7 +52,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A website for a published writer using GSAP animations + scrolltrigger. The Website let's the user choose darkmode and store the preferance in localstorage.
+A website made for a published writer using GSAP animations + scrolltrigger. The Website let's the user choose darkmode and store the preferance in localstorage.
 
 ### Built With
 
