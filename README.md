@@ -5,7 +5,7 @@
     <img src="https://github.com/ChristianPredoianu/writer-paulina/blob/main/assets/parallax-img.jpg" alt="Logo" width="200" height="150">
   </a>
 
-  <h3 align="center">React Demo-Store</h3>
+  <h3 align="center">Writer Paulina</h3>
 
   <p align="center">
    A website made for a published writer.
