@@ -63,7 +63,8 @@ A website made for a published writer using GSAP animations + scrolltrigger. The
 * [Css](https://www.w3.org/Style/CSS/Overview.en.html)
 * [HTML](https://developer.mozilla.org/sv-SE/docs/Web/HTML)
 * [GSAP](https://greensock.com/gsap/)
-* [LocalStorage] 
+* [SwiperJs](https://swiperjs.com/)
+* [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) 
 
 
 
@@ -118,7 +119,7 @@ Project Link: [https://github.com/ChristianPredoianu/writer-paulina](https://git
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [SwiperJs](https://swiperjs.com/)
+
 * [Google Fonts](https://fonts.google.com/)
 * [Font-Awesome](https://fontawesome.com/)
 
