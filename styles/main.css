@@ -51,7 +51,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -165,7 +164,7 @@ a:hover, a:focus {
   color: #fff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 14rem 6rem;
+  padding: 6rem;
   margin: auto 0;
 }
 
@@ -401,9 +400,6 @@ header {
 .nav__secondary-logo--top {
   font-size: clamp(1.3rem, 2vw, 1.6rem);
 }
-.nav__secondary-logo--bottom {
-  font-weight: 600;
-}
 .nav--order {
   background-color: var(--clr-secondary);
 }
@@ -470,7 +466,6 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 1rem;
   border-radius: 1rem;
-  margin-top: 1rem;
   box-shadow: var(--box-shadow);
 }
 
@@ -735,8 +730,8 @@ header {
   left: 13%;
   width: 70%;
   height: 120%;
-  background: #3c2c28;
-  background: linear-gradient(90deg, #3c2c28 0%, #8f4300 100%);
+  background: rgb(60, 44, 40);
+  background: linear-gradient(90deg, rgb(60, 44, 40) 0%, rgb(143, 67, 0) 100%);
   border-radius: 50%;
   z-index: -1;
   box-shadow: var(--box-shadow);
@@ -845,7 +840,7 @@ header {
 
 .contact-box {
   position: absolute;
-  top: -1rem;
+  top: -0.5rem;
   left: 2rem;
   background-color: var(--clr-tertiary);
   color: var(--clr-primary);
