@@ -14,10 +14,10 @@ progress::-webkit-progress-bar {
   background: transparent;
 }
 progress::-webkit-progress-value {
-  background: linear-gradient(to right, #02aab0, #00cdac);
+  background: linear-gradient(to right, hsl(182, 98%, 35%), hsl(170, 100%, 40%));
   background-attachment: fixed;
 }
 progress::-moz-progress-bar {
-  background: linear-gradient(to right, #02aab0, #00cdac);
+  background: linear-gradient(to right, hsl(182, 98%, 35%), hsl(170, 100%, 40%));
   background-attachment: fixed;
 }
