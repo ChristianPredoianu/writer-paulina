@@ -112,17 +112,16 @@ a:hover, a:focus {
 
 :root {
   /*=============================COLORS==================================*/
-  --clr-primary: #f8f8f8;
-  --clr-secondary: #141414;
-  --clr-tertiary: #0a7871;
-  --clr-gray-light: #d4d4d4;
-  --clr-dark-mode: #121212;
-  --clr-link-hvr: #1f7ffd;
-  --clr-hero-overlay: rgba(3, 3, 3, 0.5);
-  --clr-hero-overlay-dark: rgba(3, 3, 3, 0.7);
-  --box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  --box-shadow-light: rgba(255, 255, 255, 0.15) 0px 5px 15px 0px;
+  --clr-primary: hsl(0, 0%, 97%);
+  --clr-secondary: hsl(0, 0%, 8%);
+  --clr-tertiary: hsl(176, 85%, 25%);
+  --clr-gray-light: hsl(0, 0%, 83%);
+  --clr-dark-mode: hsl(0, 0%, 7%);
+  --clr-link-hvr: hsl(214, 98%, 56%);
+  --clr-hero-overlay: hsla(0, 0%, 1%, 0.5);
+  --clr-hero-overlay-dark: hsla(0, 0%, 1%, 0.7);
+  --box-shadow: hsla(0, 0%, 0%, 0.3) 0px 19px 38px, hsla(0, 0%, 0%, 0.22) 0px 15px 12px;
+  --box-shadow-light: hsla(0, 0%, 100%, 0.15) 0px 5px 15px 0px;
   /*=============================SPACINGS==================================*/
   --section-spacing: 5rem;
   --mobile-el-spacing: 3rem;
@@ -146,7 +145,7 @@ a:hover, a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: hsla(0deg, 0%, 0%, 0.7);
   z-index: 500;
 }
 
@@ -161,7 +160,7 @@ a:hover, a:focus {
   height: 100%;
   position: relative;
   font-size: 1.5rem;
-  color: #fff;
+  color: hsl(0deg, 0%, 100%);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 6rem;
@@ -201,7 +200,7 @@ a:hover, a:focus {
 }
 
 .swiper-button-next {
-  color: #fff !important;
+  color: hsl(0deg, 0%, 100%) !important;
 }
 @media (min-width: 64em) {
   .swiper-button-next {
@@ -210,7 +209,7 @@ a:hover, a:focus {
 }
 
 .swiper-button-prev {
-  color: #fff !important;
+  color: hsl(0deg, 0%, 100%) !important;
 }
 @media (min-width: 64em) {
   .swiper-button-prev {
@@ -219,7 +218,7 @@ a:hover, a:focus {
 }
 
 .swiper-pagination-bullet {
-  background: #fff !important;
+  background: hsl(0deg, 0%, 100%) !important;
 }
 
 .footer {
@@ -230,7 +229,7 @@ a:hover, a:focus {
   color: var(--clr-primary);
   margin-top: var(--section-spacing);
   padding: 5rem 2rem;
-  border-top: 1px solid white;
+  border-top: 1px solid hsl(0deg, 0%, 100%);
 }
 .footer__logo {
   position: relative;
@@ -316,7 +315,7 @@ a:hover, a:focus {
   color: var(--clr-primary);
 }
 .cta-btn:hover {
-  background-color: #07948d;
+  background-color: hsl(177deg, 91%, 30%);
   color: var(--clr-primary);
 }
 
@@ -338,12 +337,12 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background: linear-gradient(to right, #02aab0, #00cdac);
+  background: linear-gradient(to right, hsl(182deg, 98%, 35%), hsl(170deg, 100%, 40%));
   background-attachment: fixed;
 }
 
 progress::-moz-progress-bar {
-  background: linear-gradient(to right, #02aab0, #00cdac);
+  background: linear-gradient(to right, hsl(182deg, 98%, 35%), hsl(170deg, 100%, 40%));
   background-attachment: fixed;
 }
 
@@ -392,7 +391,7 @@ header {
   }
 }
 .nav__logo:hover {
-  color: #fff;
+  color: hsl(0deg, 0%, 100%);
 }
 .nav__secondary-logo {
   margin-left: 3rem;
@@ -463,24 +462,23 @@ header {
   }
 }
 .dark-mode-icon--order {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: hsla(0deg, 0%, 0%, 0.8);
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
 }
 
 .video-controls {
-  position: absolute;
-  top: 8rem;
-  left: 10rem;
-  display: flex;
-  justify-content: space-between;
-  margin: 0, auto;
-  color: var(--clr-gray-light);
+  display: none;
 }
-@media (min-width: 40em) {
+@media (min-width: 64em) {
   .video-controls {
-    position: static;
+    position: absolute;
+    right: 20rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0, auto;
+    color: var(--clr-gray-light);
   }
 }
 .video-controls__icon {
@@ -495,11 +493,6 @@ header {
 }
 .video-controls__icon:not(:first-of-type) {
   margin-left: 3rem;
-}
-@media (min-width: 80em) {
-  .video-controls__icon {
-    font-size: 3rem;
-  }
 }
 
 .social-media-icons {
@@ -517,7 +510,7 @@ header {
   .social-media-icons {
     position: absolute;
     top: 30rem;
-    right: 13rem;
+    right: 11rem;
     display: flex;
     flex-direction: column;
   }
@@ -525,7 +518,7 @@ header {
 .social-media-icons__icon {
   font-size: 1.5rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.1s;
 }
 @media (min-width: 80em) {
   .social-media-icons__icon {
@@ -541,11 +534,12 @@ header {
   }
 }
 .social-media-icons__icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  color: hsl(0deg, 1%, 70%);
 }
 .social-media-icons--order {
   right: 2rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: hsla(0deg, 0%, 0%, 0.8);
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
@@ -610,7 +604,6 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  /* inset: 0; */
   min-height: 100vh;
   background-color: var(--hero-overlay);
   z-index: -1;
@@ -638,7 +631,7 @@ header {
 .hero-text__cta-btn {
   margin: 8rem 0;
   align-self: flex-start;
-  background-color: rgba(10, 120, 113, 0.5);
+  background-color: hsla(176deg, 85%, 25%, 0.5);
 }
 @media (min-width: 40em) {
   .hero-text__cta-btn {
