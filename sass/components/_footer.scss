@@ -6,7 +6,7 @@
   color: var(--clr-primary);
   margin-top: var(--section-spacing);
   padding: 5rem 2rem;
-  border-top: 1px solid white;
+  border-top: 1px solid hsl(0, 0%, 100%);
 
   &__logo {
     position: relative;
