@@ -36,7 +36,7 @@ header {
     }
 
     &:hover {
-      color: #fff;
+      color: hsl(0, 0%, 100%);
     }
   }
 
@@ -103,7 +103,7 @@ header {
   }
 
   &--order {
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: hsla(0, 0%, 0%, 0.8);
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -111,13 +111,13 @@ header {
 }
 
 .video-controls {
-  @include position($pos: absolute, $top: 8rem, $left: 10rem);
-  @include flex-config($justify: space-between);
-  margin: 0, auto;
-  color: var(--clr-gray-light);
+  display: none;
 
-  @include respond(sm) {
-    position: static;
+  @include respond(md) {
+    @include position($pos: absolute, $right: 20rem);
+    @include flex-config($justify: space-between);
+    margin: 0, auto;
+    color: var(--clr-gray-light);
   }
 
   &__icon {
@@ -132,10 +132,6 @@ header {
     &:not(:first-of-type) {
       margin-left: 3rem;
     }
-
-    @include respond(lg) {
-      font-size: 3rem;
-    }
   }
 }
 
@@ -148,14 +144,14 @@ header {
   }
 
   @include respond(lg) {
-    @include position($pos: absolute, $top: 30rem, $right: 13rem);
+    @include position($pos: absolute, $top: 30rem, $right: 11rem);
     @include flex-config($direction: column);
   }
 
   &__icon {
     font-size: 1.5rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.1s;
 
     @include respond(lg) {
       font-size: 3rem;
@@ -170,13 +166,14 @@ header {
     }
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+      color: hsl(0, 1%, 70%);
     }
   }
 
   &--order {
     right: 2rem;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: hsla(0, 0%, 0%, 0.8);
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -228,8 +225,6 @@ header {
 
   &::after {
     @include pseudo($top: 0, $left: 0, $bottom: 0, $right: 0);
-    //Currently 87% on caniuse
-    /* inset: 0; */
     min-height: 100vh;
     background-color: var(--hero-overlay);
     z-index: -1;
@@ -259,7 +254,7 @@ header {
   &__cta-btn {
     margin: 8rem 0;
     align-self: flex-start;
-    background-color: rgb(10, 120, 113, 0.5);
+    background-color: hsla(176, 85%, 25%, 0.5);
 
     @include respond(sm) {
       margin: 5rem 0;
