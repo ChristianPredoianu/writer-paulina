@@ -4,7 +4,7 @@
   @include position($pos: absolute, $top: 0, $left: 0);
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.7);
+  background-color: hsla(0, 0%, 0%, 0.7);
   z-index: 500;
 }
 
@@ -19,7 +19,7 @@
   height: 100%;
   position: relative;
   font-size: 1.5rem;
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 6rem;
@@ -57,7 +57,7 @@
 }
 
 .swiper-button-next {
-  color: #fff !important;
+  color: hsl(0, 0%, 100%) !important;
 
   @include respond(md) {
     display: block;
@@ -65,7 +65,7 @@
 }
 
 .swiper-button-prev {
-  color: #fff !important;
+  color: hsl(0, 0%, 100%) !important;
 
   @include respond(md) {
     display: block;
@@ -73,5 +73,5 @@
 }
 
 .swiper-pagination-bullet {
-  background: #fff !important;
+  background: hsl(0, 0%, 100%) !important;
 }
