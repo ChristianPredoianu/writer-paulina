@@ -3,18 +3,17 @@
 :root {
   /*=============================COLORS==================================*/
 
-  --clr-primary: #f8f8f8;
-  --clr-secondary: #141414;
-  --clr-tertiary: #0a7871;
-  --clr-gray-light: #d4d4d4;
-  --clr-dark-mode: #121212;
-  --clr-link-hvr: #1f7ffd;
-  --clr-hero-overlay: rgba(3, 3, 3, 0.5);
-  --clr-hero-overlay-dark: rgba(3, 3, 3, 0.7);
+  --clr-primary: hsl(0, 0%, 97%);
+  --clr-secondary: hsl(0, 0%, 8%);
+  --clr-tertiary: hsl(176, 85%, 25%);
+  --clr-gray-light: hsl(0, 0%, 83%);
+  --clr-dark-mode: hsl(0, 0%, 7%);
+  --clr-link-hvr: hsl(214, 98%, 56%);
+  --clr-hero-overlay: hsla(0, 0%, 1%, 0.5);
+  --clr-hero-overlay-dark: hsla(0, 0%, 1%, 0.7);
 
-  --box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  --box-shadow-light: rgba(255, 255, 255, 0.15) 0px 5px 15px 0px;
+  --box-shadow: hsla(0, 0%, 0%, 0.3) 0px 19px 38px, hsla(0, 0%, 0%, 0.22) 0px 15px 12px;
+  --box-shadow-light: hsla(0, 0%, 100%, 0.15) 0px 5px 15px 0px;
 
   /*=============================SPACINGS==================================*/
   --section-spacing: 5rem;
