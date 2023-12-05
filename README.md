@@ -12,7 +12,7 @@
     <br />
     <a href="https://github.com/ChristianPredoianu/writer-paulina"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://paulinany.se/">View Demo</a>
+    <a href="https://authorproject.netlify.app">View Demo</a>
     ·
     <a href="https://github.com/ChristianPredoianu/writer-paulina/issues">Report Bug</a>
     
